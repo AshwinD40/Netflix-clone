@@ -173,55 +173,54 @@ nav button
     font-size: 40px;
 }
 
-.according
+.accordion
 {
-    margin: 60px auto;
+    margin: 30px auto;
     width: 100%;
-    max-width: 750px;
+    max-width: 1200px;
 
 }
-.according li{
+
+.accordion li{
     list-style: none;
     width: 100%;
     padding: 5px;
 
 }
-
-.according li label
+.accordion li label
 {
+    position: relative;
     display: flex;
     align-items: center;
     padding: 20px;
     font-size: 18px;
     font-weight: 500;
-    background: #303030;
+    background:#303030;
     margin-bottom: 2px;
     cursor: pointer;
-    position: relative;
 }
+
 label::after
 {
-content: '+';
-font-size: 34px;
-position: absolute;
-right: 20px;
+    content:'+' ;
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
 }
-  
-input[type="redio"]{
+input[type="radio"]
+{
     display: none;
 }
-.according  .content{
-    background:#303030;
+.accordion .content{
+    background: #303030;
     text-align: left;
     padding: 0 20px;
     max-height: 0;
-    overflow:hidden ;
-    transition: max-height 0.5s , padding 0.5s;
+    overflow: hidden;
 }
 
-.according input[type="redio"]:checked + label + .content
+.accordion input[type="radio"]:checked + label + .content
 {
     max-height: 600px;
-    padding: 30px 20px;
+    padding: 20px 30px;
 }
-
