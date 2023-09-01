@@ -11,13 +11,15 @@ body{
 
 .header{
     width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.7) , rgba(0,0,0,0.7)) , url("images/background.png");
+    height: 90vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7) , rgba(0,0,0,0.7)) , url("images/background.png")  ;
     background-size: cover;
     background-position: center;
-    padding: 10px 8%;
+    padding: 25px 11.5%;
     position: relative;
+    
 }
+
 nav{
     display: flex;
     align-items: center;
@@ -27,7 +29,7 @@ nav{
 }
 .logo
 {
-    width: 150px;
+    width: 145px;
     cursor: pointer;
    
 }
@@ -37,77 +39,112 @@ nav button
     outline: 0;
     background: #db0001;
     color: white;
-    padding: 7px 20px;
+    padding: 7px 25px;
     font-size: 12px;
     border-radius: 4px;
     margin-left: 10px;
     cursor: pointer;
+    font-size: 1rem;
+    font-weight:550;
+
     
 
 }
 .language-btn
 {
     display: inline-flex;
-    align-items: center;background: transparent;
-    border: 1px solid white;
-    padding: 7px 10px;
+    align-items: center;
+    background:#121212c0;;
+    border: 1.5px solid rgb(79, 78, 78);
+    padding: 7px 25px;
+    
+    
 
 }
 .language-btn img{
     width: 10px;
     margin-left: 10px;
+    
+    
 }
 .header-content
 {
+    width: 80%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50% ,-50%);
     text-align: center;
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 .header-content h1{
-    font-size: 60px;
+    font-size: 50px;
     line-height: 70px;
     font-weight: 600;
-    max-width: 650px;
+    max-width: 100%;
+    text-align: center;
 
 }
-.header-content h3{
+.header-content h3 {
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    font-size: 20px;
     
+}
+.header-content p{
+
+    font-weight: 400;
+    margin-bottom: 25px;
+    font-size: 20px;
 }
 
 .email-signup
 {
     background: #fff;
-    border: 4px;
+    border-radius: 4px;
     display: flex;
     align-items: center;
     margin-top: 30px;
     overflow: hidden;
+    background: transparent;
+    gap: 15px;
+    justify-content: center;
+
 
 
 }
 .email-signup input
 {
-    flex: 1;
-    border: 0;
-    outline: 0;
-    margin-left: 20px;
+   
+    align-items: center;
+    background:#121212c0;
+    border: 1.7px solid rgb(84, 82, 82);
+    padding: 15px ;
+    padding-right: 100px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    
 
 }
 .email-signup button
 {
     background: #db0001;
+    border-radius: 4px;
+    border-color: black;
+    align-items: center;
     border: 0;
     outline: 0;
     color: white;
-    font-size: 16px;
+    font-size: 1.3rem;
+    font-weight:bold;
+    width: auto;
+    height:50px;
     cursor: pointer;
-    padding:15px 30px ;
+    margin: 0 0 0 8px;
+    padding:12px 24px ;
+    text-align: center;
 }
 
 .features1
@@ -126,7 +163,8 @@ nav button
     padding: 50px 0;
     
 
-}.text-col
+}
+.text-col
 {
     flex-basis: 50%;
     margin-bottom: 20px;
@@ -166,6 +204,7 @@ nav button
      padding: 10px 12%;
      text-align: center;
      font-size: 18px;
+     border-top: 10px solid rgb(27, 26, 26);
 
 }
 .faq h2{
@@ -198,17 +237,17 @@ nav button
     background:#303030;
     margin-bottom: 2px;
     cursor: pointer;
-}
+} 
 
-label::after
+ label::after
 {
     content:'+' ;
     font-size: 34px;
     position: absolute;
     right: 20px;
+    transition: transform 0.5s ;
 }
-input[type="radio"]
-{
+input[type="radio"]{
     display: none;
 }
 .accordion .content{
@@ -217,10 +256,93 @@ input[type="radio"]
     padding: 0 20px;
     max-height: 0;
     overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
 }
 
 .accordion input[type="radio"]:checked + label + .content
 {
     max-height: 600px;
-    padding: 20px 30px;
+    padding:30px 20px;
+} 
+.accordion input[type="radio"]:checked + label::after
+{
+    transform: rotate(135deg);
+}
+
+.faq .email-signup
+{
+    max-width: 600px;
+    margin: 20px auto 60px;
+    justify-content: center;
+
+
+}
+.faq small
+{
+    font-size:20px ;
+}
+
+            /* footer  */
+.footer
+{
+
+    
+    
+    padding: 50px 15px 10px;
+    border-top: 10px solid rgb(27, 26, 26);
+    color: #ffffffb3;
+
+}
+.footer h2{
+    
+    font-size:18px ;
+    font-weight: 400;
+    margin-bottom: 25px ;
+    margin-left:11.5%;
+}
+ 
+.footer .col
+{
+    flex-basis: 25px;
+    flex-grow: 1;
+    margin-bottom:20px 
+    ;
+}
+.footer .col a{
+    display:block;
+    text-decoration: none;
+    color: #ffffffb3;
+    font-size: 14px;
+    margin-bottom: 10px;
+
+}
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 11%;
+    
+
+    
+}
+
+.footer .language-btn
+{
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    background:#121212c0;;
+    border: 1.5px solid rgb(79, 78, 78);
+    padding: 8px 25px;
+    font-size: 1.1rem;
+    border-radius: 2px;
+   margin-left: 11.1%;
+    
+}
+
+.copyright-text
+{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px 11%;
+
 }
